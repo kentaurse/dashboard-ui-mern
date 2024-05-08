@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from 'src/assets/react.svg'
 import viteLogo from '/vite.svg'
-import 'src/assets/styles/App.css'
 import { Button } from 'antd'
 
 const AboutPage = () => {
