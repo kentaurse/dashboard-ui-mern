@@ -14,7 +14,7 @@ function App() {
       <div className="flex flex-col flex-1">
         <Header />
         <div className="h-full overflow-y-auto">
-          <div className="min-h-[779px] bg-base-300 p-2">
+          <div className="main min-h-[779px] bg-base-300 p-2 rounded-md">
             <Outlet/>
           </div>
           <Footer />
