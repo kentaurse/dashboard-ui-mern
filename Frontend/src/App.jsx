@@ -1,15 +1,25 @@
 import { Outlet } from "react-router-dom";
 import Header from 'src/components/Header';
+import Menu from 'src/components/Menu';
 import Footer from 'src/components/Footer';
-import 'src/assets/styles/App.css'
+import 'src/components/Notification'
+import { axiosSetting } from 'src/components/AxiosSetting'
 
-function App({ onChangeTheme }) {
+axiosSetting();
 
+function App() {
   return (
-    <div className="App">
-      <Header onChangeTheme={onChangeTheme}/>
-      {/* <main><Outlet /></main> */}
-      {/* <Footer /> */}
+    <div className="App flex h-screen overflow-hidden">
+      <Menu />
+      <div className="flex flex-col flex-1">
+        <Header />
+        <div className="h-full overflow-y-auto">
+          <div className="min-h-[779px] bg-base-300 p-2">
+            <Outlet/>
+          </div>
+          <Footer />
+        </div>
+      </div>
     </div>
   )
 }

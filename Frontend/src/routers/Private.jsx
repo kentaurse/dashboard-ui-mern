@@ -1,13 +1,15 @@
-import { Navigate, Outlet } from 'react-router-dom'
-
-const isAuthenticated = () => {
-  const token = localStorage.getItem('token');
-  return !!token;
-};
+import { Navigate, Outlet, useLoaderData } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { setUser } from '../redux/slices/UserSlice';
 
 const Private = () => {
+  const dispatch = useDispatch();
+  const { tokenData } = useLoaderData();
+  const isValid = tokenData.status === 200;
+  if(isValid) dispatch(setUser(tokenData.data));
+  
   return (
-    isAuthenticated() ? <Outlet/> : <Navigate to='/login'/>
+    isValid ? <Outlet/> : <Navigate to='/login'/>
   )
 }
 

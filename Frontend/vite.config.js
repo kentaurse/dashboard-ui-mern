@@ -12,6 +12,6 @@ export default defineConfig({
     },
   },
   define: {
-    'process': process
+    'process.env': process.env
   },
 })
