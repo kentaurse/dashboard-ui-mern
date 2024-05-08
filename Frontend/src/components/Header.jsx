@@ -12,8 +12,8 @@ const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className='flex justify-between gap-5 px-10 items-center py-2'>
-      <div className='flex items-center'>
+    <div className='header flex justify-between gap-5 px-10 items-center py-2'>
+      <div className='flex flex-grow items-center'>
         <button onClick={() => navigate('/dashboard')}>
           <img src='/logo.png' className='h-[45px] pr-20'/>
         </button>
