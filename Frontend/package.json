@@ -4,16 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 3000",
+    "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.2",
     "antd": "^5.15.4",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "postcss-antd-fixes": "^0.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
